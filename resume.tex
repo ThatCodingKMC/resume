@@ -1,0 +1,198 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\begin{document}
+	\vspace*{-40pt}
+
+		
+
+	%==== Profile ====%
+	\vspace*{-10pt}
+	\begin{flushleft}
+		{\Huge{Kyle Cahalan}}\\
+		Melbourne, FL 32901 $\cdot$ kylemcahalan@gmail.com $\cdot$ 321-503-8556\\
+	\end{flushleft}
+
+
+	%==== Education ====%
+	\header{Education}
+	\textbf{Eastern Florida State College}\hfill Melbourne, FL\\
+	Associates Arts \text{GPA: 3.86} \hfill Aug 2018 - May 2021\\
+	Started at 15 and completed my AA at 17 with honors recognition.\\
+	\vspace{2mm}
+
+	\textbf{SAT}
+	\vspace{-2mm}
+	\begin{itemize} \itemsep 1pt
+		\item Superscore: 1500
+	\end{itemize}
+
+
+
+	%==== Experience ====%
+	\header{Work Experience}
+	\vspace{1mm}
+
+	\textbf{Pelican Sales} \hfill Melbourne, FL\\
+	\textit{E-commerce and warehouse work} \hfill Nov 2021 - Present\\
+	\vspace{-1mm}
+	\begin{itemize} \itemsep 1pt
+		\item Set up and ran Amazon E-commerce without prior experience.
+		\item Warehouse work including managing temporary labor to pack orders.
+		\item Currently developing an E-commerce website, Done with Shopify and HTML.
+	\end{itemize}
+	\textbf{Additonal Experience:} \\
+	\vspace{-1mm}
+	\begin{itemize} \itemsep 1pt
+		\item Cashier
+		\item Server
+	\end{itemize}
+
+
+
+
+	%==== Skills ====%
+	\header{Skills}
+	\begin{itemize} \itemsep 1pt
+		\item Programming Languages: \hspace{2mm} HTML5, CSS3 \\
+		\item Technologies:         \hspace{21mm}   Git, Linux, BASH \\
+		\item OSHA forklift certified (operator training pending) \\
+		\item Unicycling \\
+		\item Public speaking and hosting \\
+		\item Swing dancing \\
+	\end{itemize}
+
+
+
+
+	%==== Projects ====%
+	% \header{Projects}
+	% \vspace{1mm}
+	
+	%project
+	% \textbf{piano\_waterfall}\hfill https://github.com/kevinacahalan/piano\_waterfall\\
+	% \vspace{-2mm}
+	% \begin{itemize} \itemsep 1pt
+	% 	\item Displays scrolling Fourier transform graph
+	% 	\item Compiles for the 3 major desktop operating systems
+	% 	\item The Fourier transform frequency graph is lined up with a plot of keys played
+	% 	\item Audio self-generated using math
+	% 	\item Has side capability of displaying 24bpp RGB PNG images
+	% \end{itemize}
+	
+	% %project
+	% \textbf{C/PM Z80 Emulator}\hfill https://github.com/kevinacahalan/CPM\_emulator\\
+	% \vspace{-2mm}
+	% \begin{itemize} \itemsep 1pt
+	% 	\item Emulates a generic Z80 microprocessor computer running the CP/M operating system 
+	% 	\item Written in C with a mix of inline x86 assembly
+	% \end{itemize}
+	
+	% %project
+	% \textbf{\textless{}kstdio.h\textgreater{}, an implementation of much of \textless{}stdio.h\textgreater{}}
+	% \vspace{-2mm}
+	% \begin{itemize} \itemsep 1pt
+	% 	\item Written for x86-64 Linux
+	% 	\item Has standard I/O functions such as printf(), scanf(), and puts()
+	% 	\item Partially written in x86 assembly to call kernel
+	% \end{itemize}
+	
+	% %project
+	% \textbf{PNG image parser}
+	% \vspace{-2mm}
+	% \begin{itemize} \itemsep 1pt
+	% 	\item Translates 24bpp RGB png images to the .ppm format
+	% 	\item Versions each written in Python, Rust, and C
+	% 	\item Image libraries were not used
+	% \end{itemize}
+	
+	%project
+	%\textbf{Cross compiled various C programs for the EZ80 microprocessor}
+	\vspace{2mm}
+
+	%==== Awards ====%
+	\header{Awards}
+	\vspace*{1mm}
+	\textbf{Eagle Scout} \hfill Boy Scouts of America\\
+	I organized the construction of a Gaga pit for my Eagle Scout 
+	project. This included obtaining project approval, planning the design of a moveable 
+	compact 20ft Gaga pit, and managing the project as the volunteers 
+	carried it out.
+	\vspace*{2mm}
+
+	\textbf{Bright Futures Scholarship} \hfill State Scholarship \\
+	\vspace*{2mm}
+
+	\header{Clearance}
+	No clearnece, but I should be eligible to get a clearnece given a clean record
+	and family clearnece history.
+\end{document}

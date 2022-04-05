@@ -1,0 +1,209 @@
+\documentclass[a4paper]{article}
+	\usepackage{fullpage}
+	\usepackage{amsmath}
+	\usepackage{amssymb}
+	\usepackage{textcomp}
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+	\textheight=10in
+	\pagestyle{empty}
+	\raggedright
+	\usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+	%\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+	\vspace*{-9pt}
+	\begin{verse}
+		\textbf{#1}   #2
+	\end{verse}
+}
+
+\newcommand{\lineunder} {
+	\vspace*{-8pt} \\
+	\hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+	{\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+	\vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+	{ \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+	\vspace*{-10pt}
+	\begin{center}
+		{\Huge \scshape {#1}}\\
+		#2 \\ #3
+	\end{center}
+	\vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+	\begin{list}
+		{$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+	\end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+	\textbf{#1} #2 $\bullet$ #3\\
+	#4 \\
+	\vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+	\textbf{#1} #2 $\bullet$ #3\\
+	#4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\begin{document}
+	\vspace*{-40pt}
+
+		
+
+	%==== Profile ====%
+	\vspace*{-10pt}
+	\begin{flushleft}
+		{\Huge{Kevin Cahalan}}\\
+		Indialantic, FL 32903 $\cdot$ kevinacahalan@gmail.com $\cdot$ 321-324-1204\\
+	\end{flushleft}
+
+
+	%==== Experience ====%
+	\header{Work Experience}
+	\vspace{1mm}
+
+	\textbf{University of Central Florida} \hfill Orlando, FL\\
+	\textit{Undergraduate Learning Assistant} \hfill Aug 2021 - Present\\
+	\vspace{-1mm}
+	\begin{itemize} \itemsep -3pt
+		\item Currently holds office hours for tutoring students with Python
+		\item Assistant to professor of Introduction to Programming course
+	\end{itemize}
+	\textbf{Tulip Tree Tech} \hfill Melbourne, FL\\
+	\textit{Software Engineer Intern} \hfill Jun 2021 - Sept 2021\\
+	\vspace{-1mm}
+	\begin{itemize} \itemsep -3pt
+		\item Developed emulator inside Docker using the Rust programming language
+		\item Used Git and GitLab to collaborate
+		\item Developed unit tests to verify correct instruction emulation
+		\item Re-implemented C++ and Java code in Rust
+	\end{itemize}
+
+
+
+
+	%==== Education ====%
+	\header{Education}
+	\textbf{University of Central Florida}\hfill Orlando, FL\\
+	BS Computer Science \text{GPA: 3.67} \hfill Aug 2020 - May 2023\\
+	\vspace{2mm}
+	\textbf{Eastern Florida State College}\hfill Melbourne, FL\\
+	Associates Arts \text{GPA: 3.74} \hfill Jan 2018 - Aug 2020\\
+	\vspace{2mm}
+
+
+	%==== Skills ====%
+	\header{Skills}
+	\begin{tabular}{ l l }
+		Programming Languages: & C, Java, Rust, Python, MIPS Assembly, Z80 Assembly \\
+		Technologies:          & Docker, FFTW3, Ghidra, Git, Linux, Makefile, SDL2, Valgrind, GDB \\
+	\end{tabular}
+	\vspace{2mm}
+
+
+
+
+	%==== Projects ====%
+	\header{Projects}
+	\vspace{1mm}
+	
+	%project
+	\textbf{piano\_waterfall}\hfill https://github.com/kevinacahalan/piano\_waterfall\\
+	\vspace{-2mm}
+	\begin{itemize} \itemsep -3pt
+		\item Displays scrolling Fourier transform graph
+		\item Compiles for the 3 major desktop operating systems
+		\item The Fourier transform frequency graph is lined up with a plot of keys played
+		\item Audio self-generated using math
+		\item Has side capability of displaying 24bpp RGB PNG images
+	\end{itemize}
+	
+	%project
+	\textbf{C/PM Z80 Emulator}\hfill https://github.com/kevinacahalan/CPM\_emulator\\
+	\vspace{-2mm}
+	\begin{itemize} \itemsep -3pt
+		\item Emulates a generic Z80 microprocessor computer running the CP/M operating system 
+		\item Written in C with a mix of inline x86 assembly
+	\end{itemize}
+	
+	%project
+	\textbf{\textless{}kstdio.h\textgreater{}, an implementation of much of \textless{}stdio.h\textgreater{}}
+	\vspace{-2mm}
+	\begin{itemize} \itemsep -3pt
+		\item Written for x86-64 Linux
+		\item Has standard I/O functions such as printf(), scanf(), and puts()
+		\item Partially written in x86 assembly to call kernel
+	\end{itemize}
+	
+	%project
+	\textbf{PNG image parser}
+	\vspace{-2mm}
+	\begin{itemize} \itemsep -3pt
+		\item Translates 24bpp RGB png images to the .ppm format
+		\item Versions each written in Python, Rust, and C
+		\item Image libraries were not used
+	\end{itemize}
+	
+	%project
+	%\textbf{Cross compiled various C programs for the EZ80 microprocessor}
+	\vspace{2mm}
+	
+
+	%==== Courses ====%
+	\header{Relevent Courses}
+	\textbf{Completed}
+	\vspace{-2mm}
+	\begin{itemize} \itemsep -3pt
+		\item Computer Science 1, \hfill						COP 3502
+		\item Computer Science 2, \hfill						COP 3503
+		\item Object Oriented Programming with Java, \hfill		COP 3330
+		\item Computer Organization, \hfill						CDA 3103
+		\item System Software, \hfill							COP 3402
+	\end{itemize}
+
+	\textbf{Spring 2022}
+	\vspace{-2mm}
+	\begin{itemize} \itemsep -3pt
+		\item Programming Languages 1,\hfill					COP 4020
+		\item Processes of Object Oriented Software, \hfill		COP 4331
+		\item Computer Architecture, \hfill						EEL 4768
+		\item Operating Systems, \hfill							COP 4600
+	\end{itemize}
+
+	\vspace{2mm}
+
+
+
+
+	%==== Awards ====%
+	\header{Awards}
+	\textbf{Eagle Scout} \hfill Boy Scouts of America\\
+	Awarded highest rank under the Boy Scout program. Led community outreach project to revitalize local church
+	nature area.
+	\vspace*{2mm}
+\end{document}
